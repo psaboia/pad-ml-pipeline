@@ -26,7 +26,12 @@ This is a git template repository. To use this template, click on the **"Use thi
     ```bash
     source .venv/bin/activate
     ```
-4. *(optional)* If you need to add more dependencies to your project, you can do so by running:
+
+    For Windows(Power Shell):
+    ```bash
+    .venv/Scripts/activate.ps1
+    ```
+5. *(optional)* If you need to add more dependencies to your project, you can do so by running:
     ```bash
     pdm add <package-name>
     ```
