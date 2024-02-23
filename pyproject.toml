@@ -1,9 +1,9 @@
 [project]
-name = ""
-version = ""
-description = ""
+name = "pad-ml-pipeline-template"
+version = "0.1.0"
+description = "Template for PAD ML Pipeline"
 authors = [
-    {name = "psaboia", email = "psaboiawork@gmail.com"},
+    {name = "Priscila Saboia Moreira", email = "pmoreira@nd.edu"},
 ]
 dependencies = [
     "certifi==2022.12.7",
