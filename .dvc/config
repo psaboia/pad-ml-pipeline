@@ -1,9 +1,9 @@
 [core]
     autostage = true
     remote = pad-gcloud-project
-    
 ['remote "pad-gcloud-project"']
     url = gdrive://1MDV7CYospLuAK7AlNCY3PT3N2zvkEO8-
-    
+    gdrive_use_service_account = true
+    gdrive_service_account_user_email = dvc-service@dvc-pad-data-registry.iam.gserviceaccount.com
 ['remote "area52-pmoreira"']
     url = /mnt/slow_data/pmoreira/datasets/pad-dvc-remote
