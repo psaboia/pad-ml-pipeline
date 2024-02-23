@@ -1,0 +1,95 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python3 and PDM",
+    "build": {
+		"dockerfile": "Dockerfile"
+	},
+	
+    // 👇 Features to add to the dev container. More info: https://containers.dev/features and https://containers.dev/implementors/features.
+    "features": {
+		// Install Quarto CLI for nbdev
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+		"version": "latest"
+		}
+	  },
+
+    // 👇 To use CUDA (GPU) inside the container. Comment if you don't have access to gpu.
+    //"runArgs": ["--gpus","all"],    	  
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8888],
+
+    // 👇 Use 'postCreateCommand' to run commands after the container is created.
+    //"postCreateCommand": "pdm sync",
+    "postCreateCommand": "pdm update",
+
+    // 👇 Use 'postAttachCommand' to run commands when attaching to the container
+    // "postAttachCommand": "zsh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"python.defaultInterpreterPath": "${containerWorkspaceFolder}/.venv/bin/python"
+				// "python.linting.enabled": true,
+				// "python.linting.pylintEnabled": true,				
+			},
+			
+        	// Add the IDs of extensions you want installed when the container is created.
+        	"extensions": [
+				// python
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"donjayamanne.python-environment-manager",
+				"donjayamanne.python-extension-pack",
+				"kevinrose.vsc-python-indent",
+							
+				// jupyter
+				"ms-toolsai.jupyter",
+				"ms-toolsai.jupyter-renderers",
+				"ms-toolsai.vscode-jupyter-slideshow",
+	
+				// DVC and nbdev
+				"iterative.dvc",				
+				"hamelhusain.nbdev",
+				"sumneko.lua",
+				
+				// shell
+				"foxundermoon.shell-format",
+				"timonwong.shellcheck",
+		
+				// env
+				"mikestead.dotenv",
+		
+				// git
+				"GitHub.copilot-nightly",
+				"GitHub.codespaces",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"GitHub.vscode-pull-request-github",
+				"codezombiech.gitignore",
+		
+				// other
+				"streetsidesoftware.code-spell-checker",
+				"DavidAnson.vscode-markdownlint",
+				"ms-azuretools.vscode-docker",
+				"tamasfe.even-better-toml",
+				"esbenp.prettier-vscode",
+				"redhat.vscode-yaml",
+				"ultram4rine.vscode-choosealicense",
+				"shd101wyy.markdown-preview-enhanced"
+				// "oderwat.indent-rainbow"				
+			]
+		}
+	}
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	//"remoteUser": "vscode"	
+	
+}
+
