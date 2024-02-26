@@ -3,7 +3,6 @@
     remote = pad-gcloud-project
 ['remote "pad-gcloud-project"']
     url = gdrive://1MDV7CYospLuAK7AlNCY3PT3N2zvkEO8-
+    gdrive_client_id = 792285069884-aud3vp8t7aqo413dc46fpquiiqc0f270.apps.googleusercontent.com
+    gdrive_client_secret = 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
     gdrive_use_service_account = true
-    gdrive_service_account_user_email = dvc-service@dvc-pad-data-registry.iam.gserviceaccount.com
-['remote "area52-pmoreira"']
-    url = /mnt/slow_data/pmoreira/datasets/pad-dvc-remote

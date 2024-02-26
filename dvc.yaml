@@ -1,0 +1,12 @@
+stages:
+  split_dev_set:
+    cmd: papermill nbs/split_train_val.ipynb $(split_train_val.seed) outputs/split_completed.ipynb -p VALIDATION_SIZE $(split_train_val.val_size) -p SEED $(split_train_val.seed)
+    deps:
+    - datasets/FHI2020_Stratified_Sampling/dev_set.csv
+    - datasets/FHI2020_Stratified_Sampling/images
+    - nbs/split_train_val.ipynb
+    outs:
+    - datasets/FHI2020_Stratified_Sampling/report/train_set_heatmap.png
+    - datasets/FHI2020_Stratified_Sampling/report/val_set_heatmap.png
+    - datasets/FHI2020_Stratified_Sampling/train_set.csv
+    - datasets/FHI2020_Stratified_Sampling/val_set.csv

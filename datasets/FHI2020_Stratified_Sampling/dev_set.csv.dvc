@@ -1,0 +1,12 @@
+md5: 0818d7237b78aed12df526044d1d55c3
+frozen: true
+deps:
+- path: datasets/FHI2020_Stratified_Sampling/dev_set.csv
+  repo:
+    url: https://github.com/PaperAnalyticalDeviceND/pad_dataset_registry
+    rev_lock: 965f16687f933491a4a49299a2187b94259ec190
+outs:
+- md5: 2065e3d48979d795dfa53f0a12f0bff7
+  size: 1386905
+  hash: md5
+  path: dev_set.csv

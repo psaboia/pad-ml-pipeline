@@ -28,6 +28,7 @@ dependencies = [
     "seaborn>=0.13.1",
     "dvc>=3.44.0",
     "dvc-gdrive>=3.0.1",
+    "papermill>=2.4.0",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
